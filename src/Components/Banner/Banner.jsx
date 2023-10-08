@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <>
-      <div className="relative h-[700px] flex items-center justify-center">
+      <div className="relative flex items-center justify-center  py-28 lg:py-48">
         <img
           src="https://i.ibb.co/RB7qjgG/alex-kotliarskyi-our-QHRTE2-IM-unsplash.jpg"
           className="absolute object-cover h-full w-full -z-10"
@@ -20,16 +20,18 @@ const Banner = () => {
               innovation, and gamer meetups that connect communities, we make
               every event epic.
             </p>
-            <button className="btn bg-teal-400 border-none hover:bg-teal-400 text-white font-bold">
-              Get Started
-            </button>
+            <div className="flex justify-center lg:justify-start">
+              <button className="btn bg-teal-400 border-none hover:bg-teal-400 text-white font-bold px-8">
+                Get Started
+              </button>
+            </div>
           </div>
           <div className="text-center mx-auto bg-black bg-opacity-70 rounded-lg py-24 flex-1 w-full space-y-3">
             <h1 className="text-6xl md:text-7xl font-medium">
               Geek<span className="text-teal-400">Fest</span>
             </h1>
             <p className="text-xl font-thin">
-              Your <span className="font-bold">Event</span>, Our{" "}
+              Your <span className="font-bold">Event</span>, Our
               <span className="font-bold">Expertise!</span>
             </p>
           </div>
