@@ -8,6 +8,8 @@ import Home from "./Components/Home/Home";
 import Events from "./Components/Events/Events";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
+import ServiceDetails from "./Components/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./Routes/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,15 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Events></Events>,
+      },
+      {
+        path: "/service/:id",
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/services.json"),
       },
     ],
   },

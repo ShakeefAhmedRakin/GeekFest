@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { AiOutlineDollarCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
   return (
@@ -18,9 +19,11 @@ const Service = ({ service }) => {
               <AiOutlineDollarCircle className="text-2xl text-teal-800"></AiOutlineDollarCircle>
               {service.price}
             </h3>
-            <button className="btn  text-white bg-gradient-to-bl from-teal-400 via-violet-500 to-violet-800">
-              Details
-            </button>
+            <Link to={`/service/${service.id}`}>
+              <button className="btn  text-white bg-gradient-to-bl from-teal-400 via-violet-500 to-violet-800">
+                Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
