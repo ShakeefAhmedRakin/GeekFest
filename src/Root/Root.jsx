@@ -4,8 +4,12 @@ import Navbar from "../Components/Navbar/Navbar";
 const Root = () => {
   return (
     <>
-      <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="fixed w-full z-20 top-0">
+        <Navbar></Navbar>
+      </div>
+      <div>
+        <Outlet></Outlet>
+      </div>
     </>
   );
 };

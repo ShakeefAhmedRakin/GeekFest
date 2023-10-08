@@ -3,7 +3,9 @@ import Banner from "../Banner/Banner";
 const Home = () => {
   return (
     <>
-      <Banner></Banner>
+      <div className="py-16">
+        <Banner></Banner>
+      </div>
     </>
   );
 };

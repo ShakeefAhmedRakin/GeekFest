@@ -6,6 +6,7 @@ import Root from "./Root/Root";
 import AuthProvider from "./Providers/AuthProvider";
 import Home from "./Components/Home/Home";
 import Events from "./Components/Events/Events";
+import Login from "./Components/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "/events",
