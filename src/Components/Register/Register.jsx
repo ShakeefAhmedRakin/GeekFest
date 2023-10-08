@@ -1,22 +1,36 @@
 import { BsGoogle } from "react-icons/bs";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters or longer");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setError("Password must have an upper case letter");
+      return;
+    } else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+      setError("Password must have a special character");
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        setError("");
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.code, error.message);
+        setError(error.message);
       });
   };
 
@@ -53,6 +67,11 @@ const Register = () => {
               <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-violet-600 peer-focus:dark:text-violet-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                 Password
               </label>
+            </div>
+            <div className="h-[30px]">
+              <p className=" text-red-500 font-medium w-full text-[10px]">
+                {error ? <>{error}</> : ""}
+              </p>
             </div>
             <button className="normal-case btn bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 text-white w-full">
               Create Account

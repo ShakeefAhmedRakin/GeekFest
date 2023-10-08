@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,9 +14,11 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        setError("");
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
   };
 
@@ -52,6 +55,11 @@ const Login = () => {
               <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-violet-600 peer-focus:dark:text-violet-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                 Password
               </label>
+            </div>
+            <div className="h-[30px]">
+              <p className="text-red-500 font-medium w-full text-[10px]">
+                {error ? <>{error}</> : ""}
+              </p>
             </div>
             <button className="btn bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 text-white w-full">
               Log in

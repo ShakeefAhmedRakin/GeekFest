@@ -66,7 +66,7 @@ const Navbar = () => {
             <>
               <span>{user.email}</span>
               <a
-                className="btn bg-violet-800 hover:bg-violet-900"
+                className="btn bg-violet-800 hover:bg-violet-900 text-white border-none"
                 onClick={handleLogOut}
               >
                 Log out
