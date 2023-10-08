@@ -24,9 +24,27 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  console.log(user?.photoURL);
+
+  const userInfo = (
+    <>
+      <img
+        src={
+          user?.photoURL
+            ? user.photoURL
+            : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
+        }
+        alt=""
+        className="w-10 h-10 rounded-lg"
+      />
+      <p>{user?.displayName ? user.displayName : user?.email.split("@")[0]}</p>
+    </>
+  );
+
   return (
     <>
-      <div className="navbar bg-black">
+      <div className="navbar bg-gradient-to-b from-stone-900 via-gray-900 to-neutral-900">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,8 +65,17 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="text-lg space-y-4 dropdown-content mt-3 z-[1] p-4 shadow bg-black rounded-box w-52"
+              className="text-lg space-y-4 dropdown-content mt-3 z-[1] p-4 shadow bg-gradient-to-b from-stone-900 via-gray-900 to-neutral-900 rounded-box w-52"
             >
+              {user ? (
+                <>
+                  <div className="flex md:hidden justify-center items-center gap-2 bg-violet-800 py-[5.5px] pl-[3.5px] pr-2 rounded-lg text-white">
+                    {userInfo}
+                  </div>
+                </>
+              ) : (
+                ""
+              )}
               {links}
             </ul>
           </div>
@@ -61,10 +88,12 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="px-1 text-lg hidden lg:flex gap-6">{links}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end text-white">
           {user ? (
             <>
-              <span>{user.email}</span>
+              <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-violet-800 py-[3.5px] pl-[3.5px] pr-2 rounded-lg">
+                {userInfo}
+              </div>
               <a
                 className="btn bg-violet-800 hover:bg-violet-900 text-white border-none"
                 onClick={handleLogOut}
