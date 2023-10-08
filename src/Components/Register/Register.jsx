@@ -1,7 +1,8 @@
-import { BsGoogle } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -27,6 +28,16 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         setError("");
+        toast.success("Registered successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .catch((error) => {
         console.log(error.code, error.message);
@@ -36,8 +47,8 @@ const Register = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80 h-screen flex justify-center items-center">
-        <div className="bg-white px-12 py-8 rounded-lg shadow-lg">
+      <div className="bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80 h-screen flex justify-center items-center px-2">
+        <div className="bg-white px-12 py-8 rounded-lg shadow-lg w-[400px]">
           <form onSubmit={handleRegister}>
             <h1 className="text-black font-bold text-center mb-8 text-2xl">
               Sign Up
@@ -77,20 +88,28 @@ const Register = () => {
               Create Account
             </button>
           </form>
-          <p className="text-center my-6">Or Sign Up Using</p>
-          <div className="flex justify-center mb-2">
-            <button className="btn btn-circle">
-              <BsGoogle></BsGoogle>
-            </button>
-          </div>
+
           <p className="text-center my-6">
             Have an account?{" "}
-            <Link to="/login" className="link text-sm">
+            <Link to="/login" className="link">
               Log In Here
             </Link>
           </p>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        limit={2}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 };

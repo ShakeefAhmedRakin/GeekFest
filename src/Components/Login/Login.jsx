@@ -1,10 +1,31 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { BsGoogle } from "react-icons/bs";
 
 const Login = () => {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Logged in successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      })
+      .catch((error) => console.log(error));
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,6 +36,16 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         setError("");
+        toast.success("Logged in successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -24,8 +55,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80 h-screen flex justify-center items-center">
-        <div className="bg-white px-12 py-8 rounded-lg shadow-lg">
+      <div className="bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80 h-screen flex justify-center items-center px-2">
+        <div className="bg-white px-12 py-8 rounded-lg shadow-lg w-[450px]">
           <form onSubmit={handleLogin}>
             <h1 className="text-black font-bold text-center mb-8 text-2xl">
               Login
@@ -65,14 +96,34 @@ const Login = () => {
               Log in
             </button>
           </form>
-          <p className="text-center my-6">Dont have an account?</p>
-          <div className="flex justify-center">
-            <Link to="/register" className="link text-sm">
+          <p className="text-center mt-6">
+            <span>No Account? </span>
+            <Link to="/register" className="link">
               Sign Up Here
             </Link>
+          </p>
+          <hr className="my-3"></hr>
+          <p className="text-center ">Or Sign In Using</p>
+          <div className="flex justify-center mt-6">
+            <button className="btn btn-circle" onClick={handleGoogleSignIn}>
+              <BsGoogle></BsGoogle>
+            </button>
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        limit={2}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 };
