@@ -11,7 +11,10 @@ const Banner = () => {
           className="absolute object-cover h-full w-full -z-10"
         />
         <div className="absolute h-full w-full -z-10 bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80"></div>
-        <div className="container text-white px-2 flex flex-col-reverse lg:flex-row-reverse  justify-center items-center gap-8">
+        <div
+          className="container text-white px-2 flex flex-col-reverse lg:flex-row-reverse  justify-center items-center gap-8"
+          data-aos="fade-down"
+        >
           <div className="flex-1 space-y-4">
             <h1 className="text-3xl font-bold">
               Your Premier Tech and Gaming Event Management Experts!

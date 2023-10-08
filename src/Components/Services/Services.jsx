@@ -14,7 +14,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="container px-2 mx-auto my-8">
+      <div className="container px-2 mx-auto my-8" data-aos="fade-right">
         <h1 className="text-center text-violet-900 font-bold text-4xl">
           Our Services
         </h1>

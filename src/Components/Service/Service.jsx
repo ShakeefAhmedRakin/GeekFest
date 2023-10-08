@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const Service = ({ service }) => {
   return (
     <>
-      <div className="rounded-2xl border-[1px] border-gray-200 shadow-lg flex flex-col">
+      <div
+        className="rounded-2xl border-[1px] border-gray-200 shadow-lg flex flex-col"
+        data-aos="fade-up"
+      >
         <img
           src={service.image}
           className="rounded-t-2xl h-[200px] object-cover w-full"
