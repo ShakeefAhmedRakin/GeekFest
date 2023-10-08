@@ -1,13 +1,14 @@
+import { BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   return (
     <>
       <div className="bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80 h-screen flex justify-center items-center">
         <div className="bg-white px-12 py-8 rounded-lg shadow-lg">
           <form>
             <h1 className="text-black font-bold text-center mb-8 text-2xl">
-              Login
+              Sign Up
             </h1>
             <div className="relative z-0 w-full mb-6 group">
               <input
@@ -35,20 +36,26 @@ const Login = () => {
                 Password
               </label>
             </div>
-            <button className="btn bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 text-white w-full">
-              Log in
+            <button className="normal-case btn bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 text-white w-full">
+              Create Account
             </button>
           </form>
-          <p className="text-center my-6">Dont have an account?</p>
-          <div className="flex justify-center">
-            <Link to="/register" className="link text-sm">
-              Sign Up Here
-            </Link>
+          <p className="text-center my-6">Or Sign Up Using</p>
+          <div className="flex justify-center mb-2">
+            <button className="btn btn-circle">
+              <BsGoogle></BsGoogle>
+            </button>
           </div>
+          <p className="text-center my-6">
+            Have an account?{" "}
+            <Link to="/login" className="link text-sm">
+              Log In Here
+            </Link>
+          </p>
         </div>
       </div>
     </>
   );
 };
 
-export default Login;
+export default Register;

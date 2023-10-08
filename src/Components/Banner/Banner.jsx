@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Banner = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="relative flex items-center justify-center  py-28 lg:py-48">
@@ -21,7 +25,10 @@ const Banner = () => {
               every event epic.
             </p>
             <div className="flex justify-center lg:justify-start">
-              <button className="btn bg-teal-400 border-none hover:bg-teal-400 text-white font-bold px-8">
+              <button
+                className="btn bg-teal-400 border-none hover:bg-teal-400 text-white font-bold px-8"
+                onClick={() => navigate("/register")}
+              >
                 Get Started
               </button>
             </div>
