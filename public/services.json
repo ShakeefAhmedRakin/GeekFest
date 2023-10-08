@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "eSports Tournaments",
+    "image": "https://i.ibb.co/WkLJc7S/pexels-yan-krukau-9072394.jpg",
+    "price": "$500 - $700",
+    "short_description": "Experience the thrill of eSports tournaments organized by us.",
+    "description": "Join us as we host thrilling eSports Tournaments! Compete against top players in popular titles for a chance to win substantial cash prizes and glory. Our state-of-the-art gaming arenas and experienced referees ensure a fair and exhilarating competition. With our expert event management, immerse yourself in the world of professional gaming and make your mark in eSports history."
+  },
+  {
+    "id": 2,
+    "name": "LAN Parties",
+    "image": "https://i.ibb.co/swnSVJP/pexels-tima-miroshnichenko-6498789.jpg",
+    "price": "$250 - $300",
+    "short_description": "Let us organize LAN parties for the ultimate gaming experience.",
+    "description": "Experience the ultimate LAN Parties organized by us! Gather with friends and fellow gamers to immerse in hours of intense multiplayer gaming excitement. Bring your PC or console and connect in a local network in a dedicated gaming environment we create. Enjoy thrilling tournaments, delicious snacks, and build strong bonds with your gaming community."
+  },
+  {
+    "id": 3,
+    "name": "Game Developer Showcases",
+    "image": "https://i.ibb.co/ph834pJ/Indie-Game-The-Movie-Artwork-1.jpg",
+    "price": "$300 - $400",
+    "short_description": "Celebrate innovation in gaming with our Game Developer Showcases.",
+    "description": "Step into the world of game development with our Game Developer Showcases! We organize events where you can discover unique and innovative games crafted by talented developers. Meet the minds behind these creations, play exclusive demos, and gain insights into the game development process. Join us in celebrating creativity and innovation in the gaming industry."
+  },
+  {
+    "id": "Coding Workshops",
+    "name": "Coding Workshops",
+    "image": "https://i.ibb.co/P9SH147/kevin-ku-w7-Zyu-GYNp-RQ-unsplash.jpg",
+    "price": "$150 - $250",
+    "short_description": "Let us organize coding workshops to enhance your skills.",
+    "description": "Unlock the secrets of successful coding with our Coding Workshops! Whether you're into coding challenges, brainstorming innovative solutions, or building functional prototypes, our events are organized to provide a platform for you. Collaborate, compete, and showcase your skills to industry experts and potential employers. Our Coding Workshops are the breeding ground for tech innovation and creativity."
+  },
+  {
+    "id": 5,
+    "name": "Hackathons",
+    "image": "https://i.ibb.co/HrdKv1D/alex-kotliarskyi-QBp-ZGq-EMs-Kg-unsplash.jpg",
+    "price": "$200 - $320",
+    "short_description": "Join our high-energy hackathons to innovate and develop tech solutions.",
+    "description": "Join forces with us in our Hackathons! Dive into coding challenges, brainstorm innovative solutions, and build functional prototypes in a race against the clock. Collaborate, compete, and showcase your skills to industry experts and potential employers. Our Hackathons are the breeding ground for tech innovation and creativity."
+  },
+  {
+    "id": 6,
+    "name": "Gaming Cosplay Contests",
+    "image": "https://i.ibb.co/zrZ0vN7/muhammad-faiz-zulkeflee-p-y-Gt-LN-GKA-unsplash-min.jpg",
+    "price": "$190 - $360",
+    "short_description": "Let us organize thrilling Game Cosplay Contests for you.",
+    "description": "Step into the spotlight with our Game Cosplay Contests! Craft and display your gaming-inspired costumes, and compete against other talented cosplayers. Our contests are organized to provide the perfect platform for you to showcase your creativity and dedication to the gaming world. Join us for an unforgettable cosplay experience."
+  }
+]
