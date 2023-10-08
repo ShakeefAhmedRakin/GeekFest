@@ -24,7 +24,7 @@
     "description": "Step into the world of game development with our Game Developer Showcases! We organize events where you can discover unique and innovative games crafted by talented developers. Meet the minds behind these creations, play exclusive demos, and gain insights into the game development process. Join us in celebrating creativity and innovation in the gaming industry."
   },
   {
-    "id": "Coding Workshops",
+    "id": 4,
     "name": "Coding Workshops",
     "image": "https://i.ibb.co/P9SH147/kevin-ku-w7-Zyu-GYNp-RQ-unsplash.jpg",
     "price": "$150 - $250",
