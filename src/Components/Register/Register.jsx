@@ -1,12 +1,30 @@
 import { BsGoogle } from "react-icons/bs";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <>
       <div className="bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 opacity-80 h-screen flex justify-center items-center">
         <div className="bg-white px-12 py-8 rounded-lg shadow-lg">
-          <form>
+          <form onSubmit={handleRegister}>
             <h1 className="text-black font-bold text-center mb-8 text-2xl">
               Sign Up
             </h1>
