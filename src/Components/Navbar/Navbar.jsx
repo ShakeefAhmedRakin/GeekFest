@@ -16,14 +16,17 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li>
+      <li className="navigation-link">
         <NavLink to="/">Home</NavLink>
+      </li>
+      <li className="navigation-link">
+        <NavLink to="/events">Events</NavLink>
       </li>
     </>
   );
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-black">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,7 +35,7 @@ const Navbar = () => {
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="white"
               >
                 <path
                   strokeLinecap="round"
@@ -44,26 +47,36 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="text-lg space-y-4 dropdown-content mt-3 z-[1] p-4 shadow bg-black rounded-box w-52"
             >
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className="btn btn-ghost normal-case text-2xl">
+            <h1 className="font-medium text-violet-500">
+              Geek<span className="text-teal-400">Fest</span>
+            </h1>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="px-1 text-lg hidden lg:flex gap-6">{links}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
             <>
               <span>{user.email}</span>
-              <a className="btn" onClick={handleLogOut}>
+              <a
+                className="btn bg-violet-800 hover:bg-violet-900"
+                onClick={handleLogOut}
+              >
                 Log out
               </a>
             </>
           ) : (
-            <Link to="/login" className="btn">
+            <Link
+              to="/login"
+              className="btn bg-violet-800 hover:bg-violet-900 text-white border-none"
+            >
               Login
             </Link>
           )}

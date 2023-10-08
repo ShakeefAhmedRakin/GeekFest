@@ -13,9 +13,9 @@ const Banner = () => {
               Your Premier Tech and Gaming Event Management Experts!
             </h1>
             <p className="">
-              We're dedicated to bringing your tech and gaming dreams to life.
-              Whether you're a gamer, a tech enthusiast, or a game developer,
-              we've got your events covered. From electrifying eSports
+              We are dedicated to bringing your tech and gaming dreams to life.
+              Whether you are a gamer, a tech enthusiast, or a game developer,
+              we have got your events covered. From electrifying eSports
               tournaments to immersive gaming conventions, hackathons that spark
               innovation, and gamer meetups that connect communities, we make
               every event epic.
@@ -27,12 +27,12 @@ const Banner = () => {
             </div>
           </div>
           <div className="text-center mx-auto bg-black bg-opacity-70 rounded-lg py-24 flex-1 w-full space-y-3">
-            <h1 className="text-6xl md:text-7xl font-medium">
+            <h1 className="text-6xl md:text-7xl font-medium text-violet-500">
               Geek<span className="text-teal-400">Fest</span>
             </h1>
             <p className="text-xl font-thin">
               Your <span className="font-bold">Event</span>, Our
-              <span className="font-bold">Expertise!</span>
+              <span className="font-bold"> Expertise!</span>
             </p>
           </div>
         </div>
