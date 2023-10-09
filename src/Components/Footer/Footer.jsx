@@ -4,9 +4,9 @@ const Footer = () => {
       <footer className="footer footer-center p-10 bg-gradient-to-b from-stone-900 via-gray-900 to-neutral-900 text-white">
         <aside>
           <h1 className="normal-case text-4xl mb-5">
-            <h1 className="font-medium text-violet-500">
+            <p className="font-medium text-violet-500">
               Geek<span className="text-teal-400">Fest</span>
-            </h1>
+            </p>
           </h1>
           <p className="font-bold">
             ACME Industries Ltd. <br />

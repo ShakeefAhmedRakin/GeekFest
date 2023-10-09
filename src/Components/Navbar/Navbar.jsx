@@ -35,23 +35,6 @@ const Navbar = () => {
     </>
   );
 
-  console.log(user?.photoURL);
-
-  const userInfo = (
-    <>
-      <img
-        src={
-          user?.photoURL
-            ? user.photoURL
-            : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-        }
-        alt=""
-        className="w-10 h-10 rounded-lg"
-      />
-      <p>{user?.displayName ? user.displayName : user?.email.split("@")[0]}</p>
-    </>
-  );
-
   return (
     <>
       <div className="navbar bg-gradient-to-b from-stone-900 via-gray-900 to-neutral-900">
@@ -80,7 +63,11 @@ const Navbar = () => {
               {user ? (
                 <>
                   <div className="flex md:hidden justify-center items-center gap-2 bg-violet-800 py-[5.5px] pl-[3.5px] pr-2 rounded-lg text-white">
-                    {userInfo}
+                    <img
+                      src={user?.photoURL}
+                      className="w-10 h-10 rounded-lg"
+                    />
+                    <p>{user?.displayName}</p>
                   </div>
                 </>
               ) : (
@@ -102,7 +89,8 @@ const Navbar = () => {
           {user ? (
             <>
               <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-violet-800 py-[3.5px] pl-[3.5px] pr-2 rounded-lg">
-                {userInfo}
+                <img src={user?.photoURL} className="w-10 h-10 rounded-lg" />
+                <p>{user?.displayName}</p>
               </div>
               <a
                 className="btn bg-violet-800 hover:bg-violet-900 text-white border-none"
