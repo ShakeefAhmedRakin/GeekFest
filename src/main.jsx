@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root/Root";
 import AuthProvider from "./Providers/AuthProvider";
 import Home from "./Components/Home/Home";
-import Events from "./Components/Events/Events";
+import ContactUs from "./Components/ContactUs/ContactUs";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import ServiceDetails from "./Components/ServiceDetails/ServiceDetails";
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/events",
-        element: <Events></Events>,
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
       },
       {
         path: "/service/:id",
