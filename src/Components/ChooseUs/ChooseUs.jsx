@@ -5,7 +5,7 @@ const ChooseUs = () => {
     <>
       <div
         className="container p-2 md:p-8 mx-auto my-8 bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 rounded-lg shadow-xl"
-        data-aos="fade-right"
+        data-aos="fade-left"
       >
         <div className="p-0 md:p-16">
           <div className="bg-black bg-opacity-40 max-w-5xl mx-auto p-4 rounded-lg ">

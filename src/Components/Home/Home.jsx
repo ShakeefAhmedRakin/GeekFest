@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner";
 import ChooseUs from "../ChooseUs/ChooseUs";
 import Services from "../Services/Services";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <div className="px-2">
           <ChooseUs></ChooseUs>
         </div>
+        <Testimonials></Testimonials>
       </div>
     </>
   );
