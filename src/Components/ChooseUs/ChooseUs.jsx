@@ -5,7 +5,7 @@ const ChooseUs = () => {
     <>
       <div
         className="container p-2 md:p-8 mx-auto my-8 bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 rounded-lg shadow-xl"
-        data-aos="fade-left"
+        data-aos="fade-up"
       >
         <div className="p-0 md:p-16">
           <div className="bg-black bg-opacity-40 max-w-5xl mx-auto p-4 rounded-lg ">
@@ -20,7 +20,10 @@ const ChooseUs = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2">
+              <div
+                data-aos="fade-up"
+                className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2"
+              >
                 <h1 className="text-xl font-bold text-violet-700 flex items-center gap-2">
                   <VscDebugBreakpointData></VscDebugBreakpointData>Expertise in
                   Tech and Gaming Events
@@ -32,7 +35,10 @@ const ChooseUs = () => {
                   target audience.
                 </p>
               </div>
-              <div className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2">
+              <div
+                data-aos="fade-up"
+                className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2"
+              >
                 <h1 className="text-xl font-bold text-violet-700 flex items-center gap-2">
                   <VscDebugBreakpointData></VscDebugBreakpointData>End-to-End
                   Event Management
@@ -44,7 +50,10 @@ const ChooseUs = () => {
                   can focus on your vision while we handle the details.
                 </p>
               </div>
-              <div className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2">
+              <div
+                data-aos="fade-up"
+                className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2"
+              >
                 <h1 className="text-xl font-bold text-violet-700 flex items-center gap-2">
                   <VscDebugBreakpointData></VscDebugBreakpointData>
                   Client-Centric Approach
@@ -55,7 +64,10 @@ const ChooseUs = () => {
                   you to bring your event dreams to life.
                 </p>
               </div>
-              <div className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2">
+              <div
+                data-aos="fade-up"
+                className="bg-gradient-to-bl from-white to-gray-300 rounded-lg p-2 shadow-lg space-y-2"
+              >
                 <h1 className="text-xl font-bold text-violet-700 flex items-center gap-2">
                   <VscDebugBreakpointData></VscDebugBreakpointData>On-Site
                   Support and Problem Solving

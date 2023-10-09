@@ -10,11 +10,9 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
 
-  console.log(services);
-
   return (
     <>
-      <div className="container px-2 mx-auto my-8" data-aos="fade-right">
+      <div className="container px-2 mx-auto my-8" data-aos="fade-up">
         <h1 className="text-center text-violet-900 font-bold text-4xl">
           Our Services
         </h1>

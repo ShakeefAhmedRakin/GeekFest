@@ -4,7 +4,7 @@ const ContactUs = () => {
       <section className="px-2 bg-gradient-to-bl from-teal-400 via-violet-700 to-violet-800 pt-24 pb-8">
         <div
           className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md bg-white rounded-lg shadow-xl"
-          data-aos="fade-left"
+          data-aos="fade-down"
         >
           <h2 className="text-4xl tracking-tight font-extrabold text-center text-gray-700 dark:text-white">
             Get in Touch with GeekFest

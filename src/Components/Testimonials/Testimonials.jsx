@@ -14,7 +14,7 @@ const Testimonials = () => {
         <div className="grid-cols-1">
           <div
             className="my-4 bg-gradient-to-bl from-white to-gray-100 space-y-4 text-center shadow-xl rounded-lg max-w-5xl p-7 mx-auto"
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <h1 className="text-xl font-bold text-teal-500">
               <span className="text-violet-700">John Smith,</span> Tournament
@@ -31,7 +31,7 @@ const Testimonials = () => {
           <hr />
           <div
             className="my-4 bg-gradient-to-bl from-white to-gray-100 space-y-4 text-center shadow-xl rounded-lg max-w-5xl p-7 mx-auto"
-            data-aos="fade-right"
+            data-aos="fade-up"
           >
             <h1 className="text-xl font-bold text-teal-500">
               <span className="text-violet-700">Alex Turner,</span> Independent
@@ -45,7 +45,7 @@ const Testimonials = () => {
           <hr />
           <div
             className="my-4 bg-gradient-to-bl from-white to-gray-100 space-y-4 text-center shadow-xl rounded-lg max-w-5xl p-7 mx-auto"
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <h1 className="text-xl font-bold text-teal-500">
               <span className="text-violet-700">Michael Chen,</span> Software
