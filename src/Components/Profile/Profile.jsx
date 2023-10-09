@@ -14,7 +14,7 @@ const Profile = () => {
                 <div className="flex justify-between gap-4 items-center">
                   <img
                     src={user?.photoURL}
-                    className="w-full object-cover h-full flex-1 rounded-xl"
+                    className="w-full object-cover h-[96px] flex-1 rounded-xl"
                   />
                   <h1 className="text-violet-600 font-bold text-4xl">
                     {user?.displayName}

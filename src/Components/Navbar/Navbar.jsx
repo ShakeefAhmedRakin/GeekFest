@@ -27,6 +27,9 @@ const Navbar = () => {
           <li className="navigation-link">
             <NavLink to="/profile">Profile</NavLink>
           </li>
+          <li className="navigation-link">
+            <NavLink to="/favorites">Favorites</NavLink>
+          </li>
         </>
       )}
     </>

@@ -12,6 +12,7 @@ import ServiceDetails from "./Components/ServiceDetails/ServiceDetails";
 import Error from "./Components/Error/Error";
 import PrivateRoute from "./Routes/PrivateRoute";
 import Profile from "./Components/Profile/Profile";
+import Favorites from "./Components/Favorites/Favorites";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/services.json"),
+      },
+      {
+        path: "/favorites",
+        element: (
+          <PrivateRoute>
+            <Favorites></Favorites>
           </PrivateRoute>
         ),
         loader: () => fetch("/services.json"),
