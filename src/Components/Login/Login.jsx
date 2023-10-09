@@ -33,8 +33,7 @@ const Login = () => {
     const password = e.target.password.value;
 
     signInUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         setError("");
         toast.success("Logged in successfully", {
           position: "bottom-right",
@@ -48,7 +47,6 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        console.log(error);
         setError(error.message);
       });
   };
