@@ -88,10 +88,19 @@ const Navbar = () => {
         <div className="navbar-end text-white">
           {user ? (
             <>
-              <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-violet-800 py-[3.5px] pl-[3.5px] pr-2 rounded-lg">
-                <img src={user?.photoURL} className="w-10 h-10 rounded-lg" />
-                <p>{user?.displayName}</p>
-              </div>
+              {user.displayName ? (
+                <>
+                  <div className="hidden md:flex justify-center items-center gap-2 mr-2 bg-violet-800 py-[3.5px] pl-[3.5px] pr-2 rounded-lg">
+                    <img
+                      src={user?.photoURL}
+                      className="w-10 h-10 rounded-lg"
+                    />
+                    <p>{user?.displayName}</p>
+                  </div>
+                </>
+              ) : (
+                ""
+              )}
               <a
                 className="btn bg-violet-800 hover:bg-violet-900 text-white border-none"
                 onClick={handleLogOut}

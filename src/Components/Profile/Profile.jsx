@@ -15,7 +15,7 @@ const Profile = () => {
                   <div>
                     <img
                       src={user?.photoURL}
-                      className="w-[96px] object-cover h-[96px] flex-1 rounded-xl"
+                      className="w-[96px] object-contain h-[96px] flex-1 rounded-xl"
                     />
                   </div>
                   <h1 className="text-violet-600 font-bold text-4xl">

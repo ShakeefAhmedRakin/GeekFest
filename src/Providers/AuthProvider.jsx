@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 
@@ -38,9 +39,35 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
+    const unSubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (currentUser) {
+        // Check if the user already has displayName and photoURL
+        const hasDisplayName = !!currentUser.displayName;
+        const hasPhotoURL = !!currentUser.photoURL;
+
+        // If no displayName, set it to the part before '@' in the email
+        if (!hasDisplayName) {
+          const emailParts = currentUser.email.split("@");
+          const username = emailParts[0];
+          await updateProfile(currentUser, {
+            displayName: username,
+          });
+        }
+
+        // If no photoURL, set the fixed one
+        if (!hasPhotoURL) {
+          await updateProfile(currentUser, {
+            photoURL:
+              "https://www.alchinlong.com/wp-content/uploads/2015/09/sample-profile-320x320.png",
+          });
+        }
+
+        setUser(currentUser);
+        setLoading(false);
+      } else {
+        setUser(null);
+        setLoading(false);
+      }
     });
 
     return () => {
